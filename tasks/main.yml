@@ -1,0 +1,50 @@
+---
+
+- name: Install packages (RedHat/CentOS)
+  dnf:
+    name: "{{ item }}"
+    state: present
+  when: ansible_os_family == 'RedHat'
+  loop: "{{ munge_packages[ansible_os_family] }}"
+
+- name: Install packages (Ubuntu/Debian)
+  apt:
+    name: "{{ item }}"
+    state: present
+  when: ansible_os_family == 'Debian'
+  loop: "{{ munge_packages[ansible_os_family] }}"
+
+- name: Create directories
+  file:
+    path:  "{{ item['path']  }}"
+    state: directory
+    owner: "{{ munge_user }}"
+    group: "{{ munge_group }}"
+    mode:  "{{ item['mode'] | default('0755') }}"
+  loop: "{{ munge_dirs }}"
+
+- name: Copy munge key
+  copy:
+    src: "{{ munge_key }}"
+    dest:  /etc/munge/munge.key
+    owner: "{{ munge_user }}"
+    group: "{{ munge_group }}"
+    mode:  "0400"
+  register: _munge_key
+
+- name: Restart munge if the file changed
+  service:
+    name: munge
+    state: restarted
+  when: _munge_key.changed
+
+- name: Start and enable munge
+  service:
+    name: munge
+    state: started
+    enabled: yes
+
+- name: change munge socket so users can write to it
+  file:
+     path: "{{ munge_socket }}"
+     mode: 'g+w,o+w'

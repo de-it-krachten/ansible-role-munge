@@ -1,0 +1,19 @@
+---
+
+munge_user: munge
+munge_group: munge
+
+munge_packages:
+  RedHat:
+    - munge
+    - munge-libs
+#@#  - munge-devel
+  Debian:
+    - munge
+    - libmunge-dev
+munge_dirs:
+  - { path: /etc/munge, mode: '0755' }
+  - { path: /var/log/munge, mode: '0755' }
+  - { path: /var/run/munge, mode: '0755' }
+
+munge_socket: /var/run/munge/munge.socket.2
