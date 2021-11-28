@@ -1,17 +1,9 @@
 ---
 
-- name: Install packages (RedHat/CentOS)
-  dnf:
+- name: Install packages
+  package:
     name: "{{ item }}"
     state: present
-  when: ansible_os_family == 'RedHat'
-  loop: "{{ munge_packages[ansible_os_family] }}"
-
-- name: Install packages (Ubuntu/Debian)
-  apt:
-    name: "{{ item }}"
-    state: present
-  when: ansible_os_family == 'Debian'
   loop: "{{ munge_packages[ansible_os_family] }}"
 
 - name: Create directories
@@ -32,7 +24,7 @@
     mode:  "0400"
   register: _munge_key
 
-- name: Restart munge if the file changed
+- name: Restart munge if the file changed  # noqa no-handler
   service:
     name: munge
     state: restarted
