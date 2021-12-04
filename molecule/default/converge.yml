@@ -1,0 +1,10 @@
+---
+- name: Converge
+  hosts: all
+  vars:
+    munge_key: tests/munge.key
+  tasks:
+
+    - name: "Include role 'ansible-role-munge'"
+      include_role:
+        name: "ansible-role-munge"
