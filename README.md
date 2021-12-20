@@ -3,7 +3,8 @@
 
 # ansible-role-munge
 
-Munge
+Install & configures munge
+See https://dun.github.io/munge/ for more information
 
 
 Platforms
@@ -13,18 +14,16 @@ Supported platforms
 
 - CentOS 7
 - CentOS 8
-- Ubuntu 18.04 LTS
-- Ubuntu 20.04 LTS
 - Debian 10 (Buster)
 - Debian 11 (Bullseye)
+- Ubuntu 18.04 LTS
+- Ubuntu 20.04 LTS
 
 
 
 Role Variables
 --------------
 <pre><code>
-
-
 # munge user & group
 munge_user: munge
 munge_group: munge
@@ -54,14 +53,11 @@ Example Playbook
 ----------------
 
 <pre><code>
-
 - name: Converge
   hosts: all
-  vars:
-    munge_key: tests/munge.key
+  vars: null
   tasks:
-
-    - name: "Include role 'ansible-role-munge'"
+    - name: Include role 'ansible-role-munge'
       include_role:
-        name: "ansible-role-munge"
+        name: ansible-role-munge
 </pre></code>
