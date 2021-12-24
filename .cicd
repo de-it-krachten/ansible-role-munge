@@ -49,6 +49,7 @@ galaxy:
 github:
   active: true
   self_hosted: false
+  fail_fast: true
   owner: de-it-krachten
   repo: ansible-role-munge
 
@@ -70,6 +71,10 @@ molecule:
     playbooks: []
     vars:
       munge_key: tests/munge.key
+
+  prepare:
+    playbooks: []
+    vars: {}
 
 # templates
 ci_templates:
