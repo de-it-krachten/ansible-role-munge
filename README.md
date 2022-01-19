@@ -14,6 +14,8 @@ Supported platforms
 
 - CentOS 7
 - CentOS 8
+- RockyLinux 8
+- AlmaLinux 8
 - Debian 10 (Buster)
 - Debian 11 (Bullseye)
 - Ubuntu 18.04 LTS
@@ -53,11 +55,12 @@ Example Playbook
 ----------------
 
 <pre><code>
-- name: Converge
+- name: sample playbook for role 'munge'
   hosts: all
-  vars: null
+  vars:
+    munge_key: tests/munge.key
   tasks:
-    - name: Include role 'ansible-role-munge'
+    - name: Include role 'munge'
       include_role:
-        name: ansible-role-munge
+        name: munge
 </pre></code>
