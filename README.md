@@ -47,6 +47,9 @@ munge_dirs:
 
 # munge socket
 munge_socket: /var/run/munge/munge.socket.2
+munge_socket_owner: "{{ munge_user }}"
+munge_socket_group: "{{ munge_group }}"
+munge_socket_mode: "0660"
 </pre></code>
 
 
