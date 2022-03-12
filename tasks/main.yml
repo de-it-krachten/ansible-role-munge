@@ -38,5 +38,7 @@
 
 - name: change munge socket so users can write to it
   file:
-     path: "{{ munge_socket }}"
-     mode: 'g+w,o+w'
+     path:  "{{ munge_socket }}"
+     owner: "{{ munge_socket_owner }}"
+     group: "{{ munge_socket_group }}"
+     mode:  "{{ munge_socket_mode }}"
