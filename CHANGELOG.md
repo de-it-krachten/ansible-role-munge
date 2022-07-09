@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.0.1...v1.1.0) (2022-07-09)
+
+
+### Features
+
+* Add support for several newer platforms ([895de83](https://github.com/de-it-krachten/ansible-role-munge/commit/895de83ac17a12004457d5b85720707af91b07e7))
+
 ## [1.0.1](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.0.0...v1.0.1) (2022-03-12)
 
 
