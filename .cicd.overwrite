@@ -1,7 +1,10 @@
+---
+
 generic:
   role_description: |
     Install & configures munge
     See https://dun.github.io/munge/ for more information
+
 molecule:
   converge:
     vars:
