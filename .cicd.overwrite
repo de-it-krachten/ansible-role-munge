@@ -6,6 +6,9 @@ generic:
     See https://dun.github.io/munge/ for more information
 
 molecule:
+  prepare:
+    vars:
+      activate_epel: true
   converge:
     vars:
       munge_key: tests/munge.key
