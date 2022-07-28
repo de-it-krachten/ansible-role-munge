@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.1.0...v1.2.0) (2022-07-28)
+
+
+### Features
+
+* Implement ansible-lint v6 support ([55fe872](https://github.com/de-it-krachten/ansible-role-munge/commit/55fe8726608e3dd18c3fd599eba2a9b0b7c22205))
+
 # [1.1.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.0.1...v1.1.0) (2022-07-09)
 
 
