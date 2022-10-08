@@ -38,7 +38,7 @@
 
 - name: Change munge socket so users can write to it
   ansible.builtin.file:
-     path: "{{ munge_socket }}"
-     owner: "{{ munge_socket_owner }}"
-     group: "{{ munge_socket_group }}"
-     mode: "{{ munge_socket_mode }}"
+    path: "{{ munge_socket }}"
+    owner: "{{ munge_socket_owner }}"
+    group: "{{ munge_socket_group }}"
+    mode: "{{ munge_socket_mode }}"
