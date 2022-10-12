@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.2.0...v1.3.0) (2022-10-12)
+
+
+### Features
+
+* Move to FQCN ([8eb6c14](https://github.com/de-it-krachten/ansible-role-munge/commit/8eb6c14b8190c8f8bd1839d8ed760948b80321be))
+* Update CI to latest standards ([cd9e0a2](https://github.com/de-it-krachten/ansible-role-munge/commit/cd9e0a2f53397adb96f79664ccf5f8a4842bc396))
+
 # [1.2.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.1.0...v1.2.0) (2022-07-28)
 
 
