@@ -7,6 +7,15 @@ Install & configures munge
 See https://dun.github.io/munge/ for more information
 
 
+
+## Dependencies
+
+#### Roles
+None
+
+#### Collections
+- community.general
+
 ## Platforms
 
 Supported platforms
@@ -63,6 +72,7 @@ munge_socket_mode: "0660"
 
 
 
+
 ## Example Playbook
 ### molecule/default/converge.yml
 <pre><code>
@@ -73,6 +83,6 @@ munge_socket_mode: "0660"
     munge_key: tests/munge.key
   tasks:
     - name: Include role 'munge'
-      include_role:
+      ansible.builtin.include_role:
         name: munge
 </pre></code>

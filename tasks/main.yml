@@ -1,44 +1,44 @@
 ---
 
 - name: Install packages
-  package:
+  ansible.builtin.package:
     name: "{{ item }}"
     state: present
   loop: "{{ munge_packages[ansible_os_family] }}"
 
 - name: Create directories
-  file:
-    path:  "{{ item['path']  }}"
+  ansible.builtin.file:
+    path: "{{ item['path'] }}"
     state: directory
     owner: "{{ munge_user }}"
     group: "{{ munge_group }}"
-    mode:  "{{ item['mode'] | default('0755') }}"
+    mode: "{{ item['mode'] | default('0755') }}"
   loop: "{{ munge_dirs }}"
 
 - name: Copy munge key
-  copy:
+  ansible.builtin.copy:
     src: "{{ munge_key }}"
-    dest:  /etc/munge/munge.key
+    dest: /etc/munge/munge.key
     owner: "{{ munge_user }}"
     group: "{{ munge_group }}"
-    mode:  "0400"
+    mode: "0400"
   register: _munge_key
 
 - name: Restart munge if the file changed  # noqa no-handler
-  service:
+  ansible.builtin.service:
     name: munge
     state: restarted
   when: _munge_key.changed
 
 - name: Start and enable munge
-  service:
+  ansible.builtin.service:
     name: munge
     state: started
     enabled: yes
 
-- name: change munge socket so users can write to it
-  file:
-     path:  "{{ munge_socket }}"
-     owner: "{{ munge_socket_owner }}"
-     group: "{{ munge_socket_group }}"
-     mode:  "{{ munge_socket_mode }}"
+- name: Change munge socket so users can write to it
+  ansible.builtin.file:
+    path: "{{ munge_socket }}"
+    owner: "{{ munge_socket_owner }}"
+    group: "{{ munge_socket_group }}"
+    mode: "{{ munge_socket_mode }}"
