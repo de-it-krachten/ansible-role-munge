@@ -13,6 +13,9 @@ munge_packages:
   Debian:
     - munge
     - libmunge-dev
+  Suse:
+    - munge
+    - libmunge2
 
 # munge config + log directories
 munge_dirs:
