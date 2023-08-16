@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.3.0...v1.4.0) (2023-08-16)
+
+
+### Bug Fixes
+
+* Fix support for (Open)SUSE ([fc1259c](https://github.com/de-it-krachten/ansible-role-munge/commit/fc1259c43a4032a0e47d383d3af1d56c8101d348))
+
+
+### Features
+
+* Update supported platforms & CI ([1e93627](https://github.com/de-it-krachten/ansible-role-munge/commit/1e93627c7f3a5f13e17ba19394e9c9989df4fcdf))
+
 # [1.3.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.2.0...v1.3.0) (2022-10-12)
 
 
