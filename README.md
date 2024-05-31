@@ -14,7 +14,7 @@ See https://dun.github.io/munge/ for more information
 None
 
 #### Collections
-- community.general
+None
 
 ## Platforms
 
@@ -32,13 +32,13 @@ Supported platforms
 - AlmaLinux 9
 - SUSE Linux Enterprise 15<sup>1</sup>
 - openSUSE Leap 15
-- Debian 10 (Buster)<sup>1</sup>
 - Debian 11 (Bullseye)
 - Debian 12 (Bookworm)
 - Ubuntu 20.04 LTS
 - Ubuntu 22.04 LTS
-- Fedora 37
-- Fedora 38
+- Ubuntu 24.04 LTS
+- Fedora 39
+- Fedora 40
 
 Note:
 <sup>1</sup> : no automated testing is performed on these platforms
@@ -59,6 +59,9 @@ munge_packages:
   Debian:
     - munge
     - libmunge-dev
+  Suse:
+    - munge
+    - libmunge2
 
 # munge config + log directories
 munge_dirs:
@@ -81,7 +84,7 @@ munge_socket_mode: "0660"
 <pre><code>
 - name: sample playbook for role 'munge'
   hosts: all
-  become: "yes"
+  become: 'yes'
   vars:
     munge_key: tests/munge.key
   tasks:
