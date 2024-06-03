@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.4.0...v1.5.0) (2024-06-03)
+
+
+### Features
+
+* Add support for Ubuntu 24.04 LTS + Fedora 40 ([9161029](https://github.com/de-it-krachten/ansible-role-munge/commit/9161029c06a1905bcad01a4d6d798b97d81ad311))
+
 # [1.4.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.3.0...v1.4.0) (2023-08-16)
 
 
