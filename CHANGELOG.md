@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.5.0...v1.6.0) (2024-12-29)
+
+
+### Features
+
+* Update supported platforms & CI ([9be06f3](https://github.com/de-it-krachten/ansible-role-munge/commit/9be06f37078a37e15783e7a0015e87e0e5caf0f8))
+
 # [1.5.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.4.0...v1.5.0) (2024-06-03)
 
 
