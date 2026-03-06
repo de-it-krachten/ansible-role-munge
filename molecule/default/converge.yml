@@ -4,6 +4,7 @@
   hosts: all
   become: "yes"
   vars:
+    molecule_driver: "{{ lookup('env', 'MOLECULE_DRIVER_NAME') }}"
     munge_key: tests/munge.key
   tasks:
     - name: Include role 'ansible-role-munge'
