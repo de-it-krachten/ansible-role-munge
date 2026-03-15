@@ -5,6 +5,12 @@ generic:
     Install & configures munge
     See https://dun.github.io/munge/ for more information
 
+# Supported platforms
+platforms:
+  ubuntu2004:
+    supported: true
+    ci: true
+
 molecule:
   prepare:
     vars:
