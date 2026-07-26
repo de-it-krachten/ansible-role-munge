@@ -1,3 +1,12 @@
+# [1.9.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.8.0...v1.9.0) (2026-07-26)
+
+
+### Features
+
+* Add support for ansible-core 2.20+ ([eb1edfe](https://github.com/de-it-krachten/ansible-role-munge/commit/eb1edfe64fa8c736c6b5e7439a584e4e8ec2a5b4))
+* Added support for Fedora 44 ([134dd63](https://github.com/de-it-krachten/ansible-role-munge/commit/134dd636297fcc6a21fa9166eace9948b03ad09b))
+* Drop support for Fedora 42 ([26be7a0](https://github.com/de-it-krachten/ansible-role-munge/commit/26be7a0e0a78f05cabb3b7b31e6cc08af32bdeda))
+
 # [1.8.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.7.0...v1.8.0) (2026-03-15)
 
 
