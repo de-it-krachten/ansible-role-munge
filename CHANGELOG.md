@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.9.0...v1.10.0) (2026-10-30)
+
+
+### Features
+
+* Drop support for Debian 11 (Bullseye) ([b4801d1](https://github.com/de-it-krachten/ansible-role-munge/commit/b4801d1032ec2a23e42b3b303c090245fb2b95a7))
+
 # [1.9.0](https://github.com/de-it-krachten/ansible-role-munge/compare/v1.8.0...v1.9.0) (2026-07-26)
 
 
